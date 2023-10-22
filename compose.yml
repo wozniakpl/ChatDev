@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  chat:
+    build: .
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    command:
+      - sh
+      - -c
+      - "python3 ./online_log/app.py"
+    volumes:
+      - .:/app

@@ -106,6 +106,31 @@ To get started, follow these steps:
    python main.py
    ```
 
+## 🐳 Docker Setup
+
+1. **Environment Setup**:
+    ```bash
+    cp .env.example .env
+    ```
+    Update `OPENAI_API_KEY` in the `.env` file with your actual OpenAI API key.
+
+2. **Build Docker Image**:
+    ```bash
+    docker compose build
+    ```
+
+3. **Run Docker Compose**:
+    ```bash
+    docker compose up
+    ```
+    Your application will now be running on `http://localhost:8000`.
+
+4. **Executing Commands**:
+    ```bash
+    docker-compose run --rm chat python3 run.py --task "[description_of_your_idea]" --name "[project_name]"
+    ```
+
+
 ## ✨️ Advanced Skills
 
 For more detailed information, please refer to our [Wiki](wiki.md), where you can find:
